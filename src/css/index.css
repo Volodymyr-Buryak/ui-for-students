@@ -80,11 +80,15 @@ body {
     padding: 14px 28px;
     border-radius: 12px;
     box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.3);
-    transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
 .nav-button:hover {
     background-color: #2563eb;
+}
+
+.nav-button:active {
+    transform: scale(0.95);
 }
 
 @media (max-width: 480px) {
