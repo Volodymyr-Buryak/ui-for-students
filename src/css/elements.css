@@ -159,6 +159,13 @@ body {
     border-bottom: 2px solid #ddd;
     width: 100%;
     margin-bottom: 15px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.ui-tabs::-webkit-scrollbar {
+    display: none;
 }
 
 .tab {
@@ -169,6 +176,8 @@ body {
     border-bottom: 2px solid transparent;
     margin-bottom: -2px;
     transition: all 0.2s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .tab:hover {
@@ -387,12 +396,17 @@ body {
         align-items: flex-start;
     }
 
+    .demo-box.gap {
+        width: 100%;
+    }
+
     .radio-label, .check-label {
         margin-bottom: 10px;
     }
 
-    .cool-link {
+    .cool-link, .ui-btn {
         width: 100%;
         text-align: center;
+        box-sizing: border-box;
     }
 }
