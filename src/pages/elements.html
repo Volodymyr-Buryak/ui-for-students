@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI Elements - UI for students</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/css/reset.css">
+    <link rel="stylesheet" href="/src/css/elements.css">
+    <script src="/src/js/elements.js" defer></script>
+</head>
+    <body>
+        <div class="page-container">
+            <header class="page-header">
+                <div>
+                    <h1>UI Elements Library</h1>
+                    <p>10 essential components for web interfaces</p>
+                </div>
+                <a href="/src/index.html" class="back-btn">← Back to Home</a>
+            </header>
+
+            <main class="elements-grid">
+                <div class="element-card">
+                    <h2>1. Radiobutton</h2>
+                    <p class="description">Used when a user needs to select exactly one option. Showing default, checked, and disabled states.</p>
+                    <div class="demo-box">
+                        <label class="radio-label">
+                            <input type="radio" name="demo-radio"> Unchecked
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="demo-radio" checked> Checked
+                        </label>
+                        <label class="radio-label disabled-label">
+                            <input type="radio" name="demo-radio-disabled" disabled> Disabled
+                        </label>
+                        <label class="radio-label disabled-label">
+                            <input type="radio" name="demo-radio-disabled" disabled checked> Disabled + Checked
+                        </label>
+                    </div>
+                </div>
+
+                <div class="element-card">
+                    <h2>2. Checkbox</h2>
+                    <p class="description">Allows the user to select one or more independent options. Showing all states.</p>
+                    <div class="demo-box">
+                        <label class="check-label">
+                            <input type="checkbox"> Unchecked
+                        </label>
+                        <label class="check-label">
+                            <input type="checkbox" checked> Checked
+                        </label>
+                        <label class="check-label disabled-label">
+                            <input type="checkbox" disabled> Disabled
+                        </label>
+                        <label class="check-label disabled-label">
+                            <input type="checkbox" disabled checked> Disabled + Checked
+                        </label>
+                    </div>
+                </div>
+
+                <div class="element-card">
+                    <h2>3. Text input & Textarea</h2>
+                    <p class="description">Provides fields for users to enter free-form text. Includes a resizable text area.</p>
+                    <div class="demo-box flex-column">
+                        <input type="text" class="ui-input" placeholder="Standard text input...">
+                        <input type="password" class="ui-input" placeholder="Password input...">
+                        <textarea class="ui-textarea" placeholder="You can resize this text area by dragging the bottom right corner!"></textarea>
+                    </div>
+                </div>
+
+                <div class="element-card">
+                    <h2>4. Tabs</h2>
+                    <p class="description">Used to alternate between different views or data sets within the same context.</p>
+                    <div class="demo-box flex-column">
+                        <div class="ui-tabs">
+                            <div class="tab active" data-tab="tab-profile">Profile</div>
+                            <div class="tab" data-tab="tab-settings">Settings</div>
+                            <div class="tab" data-tab="tab-security">Security</div>
+                        </div>
+                        <div id="tab-profile" class="tab-content" style="display: block;">
+                            <img src="/src/svg/icon-profile.svg" alt="" width="16" height="16" class="tab-icon" style="vertical-align: text-bottom; margin-right: 4px;">
+                            <strong>Profile:</strong> Welcome, Volodymyr! Here is your student info.
+                        </div>
+                        <div id="tab-settings" class="tab-content" style="display: none;">
+                            <img src="/src/svg/icon-settings.svg" alt="" width="16" height="16" class="tab-icon" style="vertical-align: text-bottom; margin-right: 4px;">
+                            <strong>Settings:</strong> Change your theme, notifications, and preferences here.
+                        </div>
+                        <div id="tab-security" class="tab-content" style="display: none;">
+                            <img src="/src/svg/icon-security.svg" alt="" width="16" height="16" class="tab-icon" style="vertical-align: text-bottom; margin-right: 4px;">
+                            <strong>Security:</strong> Manage your passwords and 2FA settings.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="element-card">
+                    <h2>5. Button</h2>
+                    <p class="description">Triggers an action or event. Includes primary, secondary, selected (active), and disabled states.</p>
+                    <div class="demo-box gap">
+                        <button class="ui-btn primary">Primary</button>
+                        <button class="ui-btn secondary">Secondary</button>
+                        <button class="ui-btn secondary active">Selected</button>
+                        <button class="ui-btn" disabled>Disabled</button>
+                    </div>
+                </div>
+
+                <div class="element-card">
+                    <h2>6. Text label</h2>
+                    <p class="description">Provides a clear text description or instruction tied to a specific input field.</p>
+                    <div class="demo-box flex-column">
+                        <div class="input-group">
+                            <label for="username" class="ui-label">Username <span class="required">*</span></label>
+                            <input type="text" id="username" class="ui-input" placeholder="Enter your username">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="element-card">
+                    <h2>7. Link </h2>
+                    <p class="description">Navigates the user to external resources and cool websites.</p>
+                    <div class="demo-box gap">
+                        <a href="https://github.com" target="_blank" class="ui-link cool-link github">GitHub ↗</a>
+                        <a href="https://codepen.io" target="_blank" class="ui-link cool-link codepen">CodePen ↗</a>
+                    </div>
+                </div>
+
+                <div class="element-card">
+                    <h2>8. Tooltip</h2>
+                    <p class="description">Displays brief, contextual text when hovering over an element to provide additional information.</p>
+                    <div class="demo-box">
+                        <span class="tooltip-container">
+                            Hover over me!
+                            <span class="tooltip-text">I am a helpful tooltip!</span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="element-card">
+                    <h2>9. Dropdown list</h2>
+                    <p class="description">Allows users to choose one value from a collapsible list of options to save space.</p>
+                    <div class="demo-box">
+                        <select class="ui-select">
+                            <option value="" disabled selected>Select a country...</option>
+                            <option value="ukraine">Ukraine</option>
+                            <option value="uk">United Kingdom</option>
+                            <option value="usa">United States</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="element-card full-width">
+                    <h2>10. Data grid</h2>
+                    <p class="description">Displays complex data in a structured, tabular format with rows and columns for easy scanning.</p>
+                    <div class="demo-box">
+                        <table class="ui-table">
+                            <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Status</th>
+                                <th>Role</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>#001</td>
+                                <td>Volodymyr Buryak</td>
+                                <td><span class="badge active">Active</span></td>
+                                <td>Student</td>
+                            </tr>
+                            <tr>
+                                <td>#002</td>
+                                <td>John Doe</td>
+                                <td><span class="badge offline">Offline</span></td>
+                                <td>Teacher</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </body>
+</html>
